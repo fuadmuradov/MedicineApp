@@ -116,7 +116,7 @@ namespace MedicineApp
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string  name = txtname.Text.Trim();
+            string name = txtname.Text.Trim();
             if (name == "")
             {
                 MessageBox.Show("Select Drag Name", "Warning",
@@ -125,7 +125,7 @@ namespace MedicineApp
             }
 
             Models.Medicine medicine = db.Medicines.FirstOrDefault(x => x.Name == name);
-            if(medicine != null)
+            if (medicine != null)
             {
                 medicine.isDeleted = true;
                 db.SaveChanges();
@@ -136,9 +136,18 @@ namespace MedicineApp
                 return;
             }
 
-            MessageBox.Show("Medicine Is Not Exist", "Warning",
-    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return;
+            //  string ss = "12-30-2021";
+            //  DateTime EndDate = DateTime.Now;
+            //   DateTime StartDate = DateTime.Now.AddDays(+7);
+            ////  DateTime StartDate = Convert.ToDateTime(ss);
+            //  int dfday = (EndDate.Date - StartDate.Date).Days;
+            //  string dtime = DateTime.Now.ToString("yyyy-MM-dd");
+            //  MessageBox.Show(StartDate.ToString("yyyy-MM-dd"), "warning", MessageBoxButtons.OK);
+
+
+            //        MessageBox.Show("Medicine Is Not Exist", "Warning",
+            //MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //        return;
 
         }
 
